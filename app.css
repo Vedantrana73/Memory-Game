@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    transition: background-color 0.3s;
+}
+
+.game-wrapper{
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.game-stats{
+    display: flex;
+    gap: 15px;
+}
+
+.game-board{
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card{
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.card.flipped{
+    background-color: #2ecc71;
+    transform: rotateY(180deg);
+}
+
+.card.matched{
+    background-color: aquamarine;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.game-controls{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #3498db;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover{
+    background-color: #2980b9;
+}
+
+#difficulty-select, #theme-select{
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#game-result{
+    font-weight: bold;
+    margin-top: 15px;
+    color: #2ecc71;
+}
+
+.dark-mode{
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.dark-mode .game-wrapper{
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.dark-mode .card.flipped{
+    background-color: #27ae60;
+}

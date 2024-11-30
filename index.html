@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <div class="game-header">
+            <h1>Memory Game</h1>
+            <div class="game-stats">
+                <div class="timer">Time: 00:00:00</div>
+                <div class="moves">Moves: 0</div>
+                <div class="score">Score: 0</div>
+            </div>
+        </div>
+        <div class="game-controls">
+            <select id="difficulty-select">
+                <option value="easy">Easy (4X4)</option>
+                <option value="medium">Medium (6X6)</option>
+            </select>
+            <select id="theme-select">
+                <option value="animals">Animals 🐶</option>
+                <option value="food">Foods 🍕</option>
+            </select>
+            <button class="btn" id="theme-toggle">🌓 Dark Mode</button>
+        </div>
+        <div class="game-board" id="game-board">
+        </div>
+        <div class="result"></div>
+        <div class="game-controls">
+            <button id="reset-btn" class="btn">Reset</button>
+            <button id="hint-btn" class="btn">Hint (3Left)</button>
+        </div>
+    </div>
+   
+</body>
+<script src="app.js"></script>
+</html>
